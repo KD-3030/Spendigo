@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Spendigo</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-success mb-4">Admin Login</h2>
+        <div class="card p-4 shadow">
+          <form id="adminLoginForm">
+            <div class="form-group">
+              <label for="adminEmail">Email:</label>
+              <input type="email" class="form-control" id="adminEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="adminPassword">Password:</label>
+              <input type="password" class="form-control" id="adminPassword" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="adminDashboard" class="mt-5" style="display: none;">
+      <h2 class="text-primary">Admin Dashboard</h2>
+      <button id="loadUsers" class="btn btn-primary mb-3">Load Users</button>
+      <div class="table-responsive">
+        <table id="userTable" class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>User ID</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Monthly Budget</th>
+              <th>Remaining Budget</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

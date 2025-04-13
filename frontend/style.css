@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 1rem; /* Add some space below the logo */
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#registration, #registrationComplete, #sign-in, #accountPage, #expense-input {
+    display: none;
+}
+
+#budget-input {
+    margin-bottom: 1.5rem;
+}
+
+#expense-input {
+    margin-top: 1.5rem;
+}
+
+#summary {
+    margin-top: 2rem;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+/* Password Wrapper for Eye Button */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding-right: 2.5rem; /* Space for the eye button */
+}
+
+.eye-button {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.eye-button:hover {
+    color: #333;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <img src="images/logo.png" alt="Spendigo Logo" class="logo">
+
+        <h1>Welcome to Spendigo</h1>
+
+        <div id="landing">
+            <button id="registerButton">Register</button>
+            <button id="signInButton">Sign In</button>
+        </div>
+
+        <div id="registration">
+            <h2>Create Account</h2>
+            <form id="registrationForm">
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <input type="tel" id="phone" placeholder="Enter Phone Number">
+                
+                <!-- Password Input with Eye Button -->
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <span class="eye-button" onclick="togglePasswordVisibility('password', this)">👁️</span>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="registrationComplete">
+            <h2>Registration Completed Successfully</h2>
+            <button id="signInAgainButton">Sign In Again</button>
+        </div>
+
+        <div id="sign-in">
+            <h2>Sign In</h2>
+            <form id="signInForm">
+                <input type="email" id="signInEmail" placeholder="Enter Email" required>
+                
+                <!-- Sign-in Password Input with Eye Button -->
+                <div class="password-wrapper">
+                    <input type="password" id="signInPassword" placeholder="Enter Password" required>
+                    <span class="eye-button" onclick="togglePasswordVisibility('signInPassword', this)">👁️</span>
+                </div>
+                
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <div id="accountPage">
+            <h2>Hello, <span id="accountEmail"></span></h2>
+
+            <div id="budget-input">
+                <h3>Enter Your Budget Details</h3>
+                <input type="number" id="monthlyBudget" placeholder="Monthly Budget" required>
+                <input type="number" id="targetDaily" placeholder="Estimated Daily Expenditure" required>
+                <button id="submitBudget">Submit Budget</button>
+            </div>
+
+            <div id="expense-input">
+                <h3>Track Daily Expenses</h3>
+                <input type="number" id="dailyExpense" placeholder="Daily Expense" required>
+                <button id="addExpense">Add Expense</button>
+                <p id="expenseWarning" class="warning-message" style="display: none; color: red;">
+                    Warning: Your expense exceeds the estimated daily expenditure!
+                </p>
+            </div>
+            
+
+            <div id="summary">
+                <h3>Daily & Monthly Savings Summary</h3>
+                <p id="dailySavings">Monthly Budget: $0</p>
+                <p id="monthlySavings">Remaining Monthly Budget: $0</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>If you need assistance, feel free to contact us at <a href="mailto:spendigoassist@gmail.com">spendigoassist@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <!-- Include script at the end to ensure all elements are loaded -->
+    <script>
+        function togglePasswordVisibility(inputId, eyeButton) {
+            const input = document.getElementById(inputId);
+
+            if (input.type === "password") {
+                input.type = "text";
+                eyeButton.textContent = "🙈"; // Change icon to hide
+            } else {
+                input.type = "password";
+                eyeButton.textContent = "👁️"; // Change icon to reveal
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
